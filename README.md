@@ -1,220 +1,223 @@
-🐔 Chicken Health Monitoring System – Backend Roadmap
+🐔 Chicken Health Monitoring System — 21-Day Roadmap
 
-Duration: 21 Days
+Goal: Build a backend system that monitors chicken farm conditions using Raspberry Pi sensors, MQTT, ASP.NET Core, SQL Server, SignalR, and Twilio.
 
-Week 1 – Backend & Database
+Duration: 3 Weeks · 21 Days
 
-Day 1 – C# Revision
-
-- [ ] Classes, Objects, Interfaces, Inheritance
-- [ ] Collections and LINQ
-- [ ] Exception Handling
-- [ ] Async/Await and Tasks
-
-Day 2 – HTTP & REST APIs
-
-- [ ] HTTP Methods and Status Codes
-- [ ] JSON
-- [ ] REST API Principles
-- [ ] Controllers and Endpoints
-
-Resource: "ASP.NET Core Web API" (https://learn.microsoft.com/en-us/aspnet/core/web-api/)
-
-Day 3 – ASP.NET Core Basics
-
-- [ ] Create a Web API Project
-- [ ] Program.cs and Middleware
-- [ ] Dependency Injection
-- [ ] Services and Controllers
-
-Resource: "ASP.NET Core Fundamentals" (https://learn.microsoft.com/en-us/aspnet/core/fundamentals/)
-
-Day 4 – SQL & Database Fundamentals
-
-- [ ] Tables and Relationships
-- [ ] Primary Keys and Foreign Keys
-- [ ] SELECT, INSERT, UPDATE, DELETE
-- [ ] JOIN
-- [ ] Database Design
-
-Resources:
-
-- "Database Fundamentals Course" (https://youtu.be/pPqazMTzNOM?si=OaCJE6MRs26bOIL1)
-- "SQL Server Fundamentals" (https://learn.microsoft.com/en-us/sql/sql-server/)
-
-Day 5 – Entity Framework Core
-
-- [ ] ORM Concepts
-- [ ] DbContext and Entities
-- [ ] Relationships
-- [ ] Migrations
-
-Resource: "Entity Framework Core" (https://learn.microsoft.com/en-us/ef/core/)
-
-Day 6 – Database Design
-
-- [ ] Sensors Table
-- [ ] SensorReadings Table
-- [ ] Alerts Table
-- [ ] Entity Relationships
-- [ ] Connect SQL Server to ASP.NET Core
-
-Day 7 – Practical Task
-
-- [ ] Create Backend Project
-- [ ] Implement Database Models
-- [ ] Configure EF Core
-- [ ] Create Sensor Readings APIs
-- [ ] Test APIs using Postman
+Daily commitment: 2–3 hours
 
 ---
 
-Week 2 – MQTT & Real-Time Communication
+Week 1 — C# & ASP.NET Core Fundamentals
 
-Day 8 – MQTT Fundamentals
+Goal: Understand the backend architecture and build a basic REST API connected to SQL Server.
 
-- [ ] MQTT Broker, Publisher, Subscriber
-- [ ] Topics
-- [ ] QoS Levels
-- [ ] Retained Messages and Last Will
+Day 1 — C# Revision
 
-Resources:
+- [ ] Review OOP concepts: Classes, Objects, Inheritance, Interfaces.
+- [ ] Practice Collections, Lists, and Dictionaries.
+- [ ] Review LINQ, Async/Await, and Exception Handling.
 
-- "MQTT Tutorial" (https://youtu.be/l_CT1sGgvdk?si=FurV_MHEUnGFMat9)
-- "MQTT Essentials" (https://www.hivemq.com/mqtt-essentials/)
+Day 2 — HTTP & REST APIs
 
-Day 9 – MQTT Broker
+- [ ] Understand HTTP methods: GET, POST, PUT, DELETE.
+- [ ] Understand Status Codes and JSON.
+- [ ] Learn REST API principles.
 
-- [ ] Install Mosquitto
-- [ ] Publish Messages
-- [ ] Subscribe to Topics
-- [ ] Test MQTT Communication
+Resources: "HTTP overview" (https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
 
-Resource: "Mosquitto Documentation" (https://mosquitto.org/documentation/)
+Day 3 — ASP.NET Core Introduction
 
-Day 10 – MQTTnet with C#
+- [ ] Understand ASP.NET Core project structure.
+- [ ] Learn Controllers and Routing.
+- [ ] Understand Dependency Injection.
+- [ ] Create your first Web API.
 
-- [ ] Install MQTTnet
-- [ ] Create MQTT Client
-- [ ] Connect to Broker
-- [ ] Subscribe to Sensor Topics
-- [ ] Receive Messages
+Resources: "ASP.NET Core Web API Fundamentals" (https://learn.microsoft.com/en-us/aspnet/core/web-api/)
 
-Resource: "MQTTnet Documentation" (https://github.com/dotnet/MQTTnet)
+Day 4 — SQL & Database Fundamentals
 
-Day 11 – Background Services
+- [ ] Understand relational databases.
+- [ ] Review Tables, Primary Keys, and Foreign Keys.
+- [ ] Practice SELECT, INSERT, UPDATE, DELETE.
+- [ ] Understand basic JOIN operations.
 
-- [ ] BackgroundService
-- [ ] IHostedService
-- [ ] Create MQTT Background Service
-- [ ] Handle Reconnection and Errors
+Resources: "Database Fundamentals Video" (https://youtu.be/pPqazMTzNOM?si=OaCJE6MRs26bOIL1)
 
-Resource: "ASP.NET Core Hosted Services" (https://learn.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services)
+Day 5 — Entity Framework Core
 
-Day 12 – Process & Store Sensor Data
+- [ ] Understand ORM and EF Core.
+- [ ] Learn DbContext and DbSet.
+- [ ] Create Models.
+- [ ] Practice Migrations.
+- [ ] Connect ASP.NET Core to SQL Server.
 
-- [ ] Receive Temperature, Humidity, and Ammonia
-- [ ] Deserialize JSON
-- [ ] Validate Sensor Readings
-- [ ] Save Data using EF Core
-- [ ] Handle Invalid Data
+Resources: "EF Core Documentation" (https://learn.microsoft.com/en-us/ef/core/)
 
-Day 13 – SignalR
+Day 6 — Database Design
 
-- [ ] WebSockets Basics
-- [ ] SignalR Hubs
-- [ ] Create SignalR Hub
-- [ ] Send Real-Time Sensor Updates
+- [ ] Design the SensorReadings table.
+- [ ] Design the Devices table.
+- [ ] Design the Alerts table.
+- [ ] Define relationships between tables.
 
-Resource: "SignalR Documentation" (https://learn.microsoft.com/en-us/aspnet/core/signalr/)
+Day 7 — Week 1 Practical Task
 
-Day 14 – Practical Task
+- [ ] Create an ASP.NET Core Web API.
+- [ ] Connect it to SQL Server using EF Core.
+- [ ] Implement CRUD operations for SensorReadings.
+- [ ] Test endpoints using Postman.
 
-- [ ] Connect Backend to MQTT Broker
-- [ ] Receive Data using MQTTnet
-- [ ] Store Readings in SQL Server
-- [ ] Send Updates using SignalR
-- [ ] Test Complete Flow
+Week 1 Deliverable: Working REST API connected to SQL Server.
 
 ---
 
-Week 3 – Authentication, Alerts & Integration
+Week 2 — MQTT & Real-Time Data
 
-Day 15 – Authentication & Authorization
+Goal: Receive sensor data through MQTT, process it in the backend, and display updates in real time.
 
-- [ ] Authentication vs Authorization
-- [ ] JWT
-- [ ] Token Generation and Validation
-- [ ] Roles and Policies
-- [ ] Protect API Endpoints
+Day 8 — MQTT Fundamentals
+
+- [ ] Understand MQTT architecture.
+- [ ] Learn Publisher and Subscriber.
+- [ ] Understand Broker, Topics, and Payloads.
+- [ ] Learn QoS levels.
+
+Resources: "MQTT Introduction Video" (https://youtu.be/l_CT1sGgvdk?si=FurV_MHEUnGFMat9)
+
+Day 9 — MQTT Broker
+
+- [ ] Understand MQTT Broker responsibilities.
+- [ ] Install Mosquitto.
+- [ ] Publish test messages.
+- [ ] Subscribe to MQTT topics.
+
+Resources: "Mosquitto Documentation" (https://mosquitto.org/documentation/)
+
+Day 10 — MQTTnet
+
+- [ ] Install MQTTnet in the ASP.NET Core project.
+- [ ] Create an MQTT client.
+- [ ] Connect to the Broker.
+- [ ] Subscribe to sensor topics.
+- [ ] Receive incoming messages.
+
+Resources: "MQTTnet GitHub" (https://github.com/dotnet/MQTTnet)
+
+Day 11 — Background Services
+
+- [ ] Understand BackgroundService.
+- [ ] Learn IHostedService.
+- [ ] Run MQTT subscription as a background service.
+- [ ] Handle connection and disconnection.
+
+Resources: "Hosted Services in ASP.NET Core" (https://learn.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services)
+
+Day 12 — Process & Store Sensor Data
+
+- [ ] Define the sensor JSON payload.
+- [ ] Deserialize incoming MQTT messages.
+- [ ] Validate temperature, humidity, and ammonia values.
+- [ ] Save valid readings to SQL Server.
+- [ ] Handle invalid messages and errors.
+
+Day 13 — SignalR
+
+- [ ] Understand WebSockets and SignalR.
+- [ ] Create a SignalR Hub.
+- [ ] Send sensor updates to connected clients.
+- [ ] Test real-time communication.
+
+Resources: "ASP.NET Core SignalR" (https://learn.microsoft.com/en-us/aspnet/core/signalr/introduction)
+
+Day 14 — Week 2 Integration Task
+
+- [ ] Receive MQTT messages.
+- [ ] Process and validate sensor data.
+- [ ] Store readings in SQL Server.
+- [ ] Broadcast updates using SignalR.
+
+Week 2 Deliverable: Real-time sensor data pipeline working end to end.
+
+---
+
+Week 3 — Alerts, Security & Final Integration
+
+Goal: Add authentication, alert notifications, testing, and complete the backend integration.
+
+Day 15 — Authentication & Authorization
+
+- [ ] Understand Authentication vs Authorization.
+- [ ] Learn ASP.NET Core Identity basics.
+- [ ] Understand JWT Authentication.
+- [ ] Learn role-based authorization.
 
 Resources:
 
-- "Authentication & Authorization Playlist" (https://youtube.com/playlist?list=PLOeFnOV9YBa4yaz-uIi5T4ZW3QQGHJQXi&si=pTCn45Zu_ITqqE6P)
+- "Authentication & Authorization Playlist" (https://youtube.com/playlist?list=PLOeFnOV9YBa4yaz-uIiT5ZW3QQGHJQXi&si=pTCn45Zu_ITqqE6P)
 - "ASP.NET Core Authentication" (https://learn.microsoft.com/en-us/aspnet/core/security/authentication/)
-- "ASP.NET Core Authorization" (https://learn.microsoft.com/en-us/aspnet/core/security/authorization/)
 
-Day 16 – Twilio SMS
+Day 16 — Twilio SMS
 
-- [ ] Twilio Setup
-- [ ] Twilio Credentials
-- [ ] Send SMS using C#
-- [ ] Create Alert Service
+- [ ] Understand Twilio SMS API.
+- [ ] Create a Twilio account.
+- [ ] Configure credentials securely.
+- [ ] Send a test SMS from ASP.NET Core.
 
-Resource: "Twilio SMS with C#" (https://www.twilio.com/docs/messaging/quickstart/csharp-dotnet)
+Resources: "Twilio C# SMS Quickstart" (https://www.twilio.com/docs/messaging/quickstart/csharp-dotnet-core)
 
-Day 17 – Alert Logic
+Day 17 — Alert Logic
 
-- [ ] Define Sensor Thresholds
-- [ ] Detect Abnormal Readings
-- [ ] Save Alerts in Database
-- [ ] Prevent Duplicate Alerts
-- [ ] Trigger SMS Notifications
+- [ ] Define safe ranges for temperature, humidity, and ammonia.
+- [ ] Detect abnormal readings.
+- [ ] Create alert records in SQL Server.
+- [ ] Send SMS notifications when thresholds are exceeded.
+- [ ] Prevent repeated unnecessary notifications.
 
-Day 18 – Security & Configuration
+Day 18 — Security & Configuration
 
-- [ ] Environment Variables
-- [ ] Secure Credentials
-- [ ] API Protection
-- [ ] Input Validation
-- [ ] Logging and Exception Handling
+- [ ] Use appsettings and environment variables.
+- [ ] Keep secrets out of source control.
+- [ ] Validate incoming data.
+- [ ] Handle exceptions and logging.
+- [ ] Secure API endpoints.
 
-Resource: "ASP.NET Core Security" (https://learn.microsoft.com/en-us/aspnet/core/security/)
+Day 19 — Testing
 
-Day 19 – Testing
+- [ ] Test API endpoints using Postman.
+- [ ] Test MQTT message handling.
+- [ ] Test database operations.
+- [ ] Test SignalR updates.
+- [ ] Test SMS alert scenarios.
 
-- [ ] Test APIs using Postman
-- [ ] Test MQTT Reception
-- [ ] Test Database Storage
-- [ ] Test SignalR Updates
-- [ ] Test SMS Alerts
-- [ ] Test Invalid Sensor Data
+Day 20 — Full System Integration
 
-Day 20 – Full System Integration
+- [ ] Connect Raspberry Pi / simulated sensor publisher.
+- [ ] Connect MQTT Broker.
+- [ ] Receive messages through MQTTnet.
+- [ ] Store readings using EF Core.
+- [ ] Broadcast updates using SignalR.
+- [ ] Trigger alerts through Twilio.
 
-- [ ] Connect Raspberry Pi or Simulator
-- [ ] Connect MQTT Broker
-- [ ] Receive and Validate Sensor Data
-- [ ] Store Data in SQL Server
-- [ ] Update Dashboard using SignalR
-- [ ] Send SMS Alerts using Twilio
+Day 21 — Final Review
 
-Day 21 – Final Review
+- [ ] Review project architecture.
+- [ ] Fix bugs and improve error handling.
+- [ ] Organize the project structure.
+- [ ] Write README documentation.
+- [ ] Add architecture diagram.
+- [ ] Test the complete workflow.
 
-- [ ] Review Project Architecture
-- [ ] Fix Bugs
-- [ ] Test Complete System
-- [ ] Organize Code and Services
-- [ ] Complete Project README
+Week 3 Deliverable: Complete backend integration with real-time monitoring and SMS alerts.
 
 ---
 
-Final Project Flow
+System Architecture
 
 Raspberry Pi Sensors
         |
         v
-   MQTT Broker
+    MQTT Broker
         |
         v
  MQTTnet Subscriber
@@ -225,13 +228,27 @@ Raspberry Pi Sensors
         v
     SQL Server
         |
-        +----------> SignalR
-        |               |
-        |               v
-        |           Dashboard
+        +------> SignalR ------> Dashboard
         |
-        v
-   Alert Service
-        |
-        v
-     Twilio SMS
+        +------> Alert Service
+                       |
+                       v
+                   Twilio SMS
+
+Final Project Checklist
+
+- [ ] ASP.NET Core Web API
+- [ ] SQL Server Database
+- [ ] Entity Framework Core
+- [ ] MQTT Broker
+- [ ] MQTTnet Subscriber
+- [ ] Background Service
+- [ ] Sensor Data Validation
+- [ ] SignalR Real-Time Updates
+- [ ] Authentication & Authorization
+- [ ] Twilio SMS Notifications
+- [ ] Testing & Documentation
+
+---
+
+Important: Focus on understanding and implementing each part. Don't just watch tutorials — write code and test every feature.
